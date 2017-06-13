@@ -1,0 +1,126 @@
+//
+//  PrefixHeader.pch
+//  Everypaper
+//
+//  Created by 满脸胡茬的怪蜀黍 on 2017/6/10.
+//  Copyright © 2017年 PuChin·chen. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+
+/*
+ *导入系统框架
+ */
+
+/*
+ *导入第三方框架
+ */
+#import <AFNetworking.h>
+#import <Masonry.h>
+#import <YYKit.h>
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+#import <pop/POP.h>
+#import <JazzHands/IFTTTJazzHands.h>
+
+//pod "AFNetworking"
+//pod "YYKit"
+//pod "Masonry"
+//pod "pop"
+//pod "DZNEmptyDataSet"
+//pod "JazzHands"
+
+/*
+ *导入自定义类
+ */
+
+//主界面相关
+#import "EPMainController.h"
+
+//欢迎界面相关
+#import "EPWelcomeController.h"
+#import "EPCircleVIew.h"
+
+//Extensize
+#import "UILabel+EPUILabel.h"
+
+/*
+ *宏定义
+ */
+
+/*
+ *颜色
+*/
+ //绿色
+#define kEPColorDefaultGreenColor [UIColor colorWithRed:0.204  green:0.659  blue:0.325 alpha:1]
+//红色
+#define kEPColorDefaultRedColor [UIColor colorWithRed:0.918  green:0.263  blue:0.208 alpha:1]
+//蓝色
+#define kEPColorDefaultBlueColor [UIColor colorWithRed:0.259  green:0.522  blue:0.957 alpha:1]
+//黄色
+#define kEPColorDefaultYellowColor [UIColor colorWithRed:0.984  green:0.737  blue:0.020 alpha:1]
+//橙色
+#define kEPColorDefaultOrangeColor [UIColor colorWithRed:1  green:0.341  blue:0.133 alpha:1]
+//柠檬色
+#define kEPColorDefaultLimeColor [UIColor colorWithRed:0.804  green:0.863  blue:0.224 alpha:1]
+//灰色
+#define kEPColorDefaultGreyColor [UIColor colorWithRed:0.620  green:0.620  blue:0.620 alpha:1]
+//黑色
+#define kEPColorDefaultBlackColor [UIColor colorWithRed:0  green:0  blue:0 alpha:1]
+//白色
+#define kEPColorDefaultWhiteColor [UIColor colorWithRed:1  green:1  blue:1 alpha:1]
+//青色
+#define kEPColorDefaultTealColor [UIColor colorWithRed:0  green:0.588  blue:0.533 alpha:1]
+//金色
+#define kEPColorDefaultAmberColor [UIColor colorWithRed:1  green:0.757  blue:0.027 alpha:1]
+
+//Background的黑背景色
+#define kEPColorDefaultBackgroundBlackColor [UIColor colorWithRed:0.188  green:0.188  blue:0.188 alpha:1]
+
+//字体颜色相关
+//一级字体黑色
+#define kEPColorDefaultPrimaryTextBlackColor [UIColor colorWithRed:0  green:0  blue:0 alpha:0.87]
+//二级字体黑色
+#define kEPColorDefaultSecondaryTextBlackColor [UIColor colorWithRed:0  green:0  blue:0 alpha:0.54]
+//三级黑色字体
+#define kEPColorDefaultTertiaryTextBlackColor [UIColor colorWithRed:0  green:0  blue:0 alpha:0.38]
+
+//一级字体白色
+#define kEPColorDefaultPrimaryTextWhiteColor [UIColor colorWithRed:1  green:1  blue:1 alpha:1]
+//二级字体白色
+#define kEPColorDefaultSecondaryTextWhiteColor [UIColor colorWithRed:1  green:1  blue:1 alpha:0.7]
+//三级字体白色
+#define kEPColorDefaultTertiaryTextWhiteColor [UIColor colorWithRed:1  green:1  blue:1 alpha:0.5]
+
+
+//字体相关
+//一级加粗字体
+#define kEPDefaultPrimaryFont [UIFont fontWithName:@"Lato-Bold" size:80]
+//二级加粗字体
+#define kEPDefaultSecondaryBoldFont [UIFont fontWithName:@"Lato-Bold" size:28]
+//二级不加粗字体
+#define kEPDefaultSecondaryRegularFont [UIFont fontWithName:@"Lato-Regular" size:28]
+//三级字体不加粗字体
+#define kEPDefaultTertiaryFont [UIFont fontWithName:@"Lato-Regular" size:14]
+
+//自定义大小的默认Bold字体
+#define kEPDefaultFontBoldWith(fontSize) [UIFont fontWithName:@"Lato-Bold" size:fontSize]
+//自定义大小的默认Regular字体
+#define kEPDefaultFontRegularWith(fontSize) [UIFont fontWithName:@"Lato-Regular" size:fontSize]
+
+//常用距离值
+//屏幕的宽高值
+//屏幕宽
+#define kScreenWidht ([UIScreen mainScreen].bounds.size.width)
+//屏幕高
+#define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
+
+#define kScreenRatio ([UIScreen mainScreen].bounds.size.width / 414)
+
+#endif
+
+#endif /* PrefixHeader_pch */
