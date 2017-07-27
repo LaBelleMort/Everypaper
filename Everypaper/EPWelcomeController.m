@@ -255,6 +255,7 @@
     }
     return _page4SessionLabel;
 }
+
 - (UIImageView *)page4ImageView {
     if (_page4ImageView == nil) {
         UIImageView *imageView = [[UIImageView alloc] init];
@@ -273,6 +274,7 @@
     }
     return _page4BackView;
 }
+
 //第五页
 - (UILabel *)page5HeaderLabel{
     if (_page5HeaderLabel == nil) {
@@ -399,6 +401,10 @@
 }
 
 - (void)configurePage1Animation {
+    
+    /*
+     * 给控件添加约束
+     */
     [self.page1HeaderLabel mas_makeConstraints:^(MASConstraintMaker *make){
         make.top.equalTo(self.contentView.mas_top).offset(40 * kScreenRatio);
     }];
@@ -496,21 +502,21 @@
     [self keepView:self.page2HeaderLabel onPage:1];
     
     [self.page2SessionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.page2HeaderLabel.mas_bottom).offset(40 * kScreenRatio);
+        make.top.equalTo(_page2HeaderLabel.mas_bottom).offset(40 * kScreenRatio);
         make.width.equalTo(@(kScreenWidht - 60));
     }];
     [self keepView:self.page2SessionLabel onPage:1];
     
     
     [self.page2TabelView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.page2SessionLabel.mas_bottom).offset(240 * kScreenRatio);
+        make.top.equalTo(_page2SessionLabel.mas_bottom).offset(240 * kScreenRatio);
         make.width.equalTo(@(260 * kScreenRatio));
         make.height.equalTo(@(114 * kScreenRatio));
     }];
     [self keepView:self.page2TabelView onPages:@[@(1),@(1.5)] atTimes:@[@(1),@(2)]];
     
     [self.page2TableStuffView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.page2SessionLabel.mas_bottom).offset(140 * kScreenRatio);
+        make.top.equalTo(_page2SessionLabel.mas_bottom).offset(140 * kScreenRatio);
         make.width.equalTo(@(180 * kScreenRatio));
         make.height.equalTo(@(102 * kScreenRatio));
     }];
@@ -586,7 +592,7 @@
     [self keepView:self.page3HeaderLabel onPages:@[@(1),@(2),@(3)]];
     
     [self.page3SessionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.page3HeaderLabel.mas_bottom).offset(40 * kScreenRatio);
+        make.top.equalTo(_page3HeaderLabel.mas_bottom).offset(40 * kScreenRatio);
         make.width.equalTo(@(kScreenWidht - 60));
     }];
     [self keepView:self.page3SessionLabel onPages:@[@(1),@(2),@(3)]];
@@ -906,7 +912,6 @@
         [self scrollViewDidEndDecelerating:scrollView];
     }
 }
-
 /*
  * UIScrollView停止"减速"时候调用
  * scrollViewDidEndDecelerating不一定会调用,

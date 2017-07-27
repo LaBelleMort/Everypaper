@@ -16,16 +16,21 @@
 /*
  *导入系统框架
  */
+#import <AVFoundation/AVFoundation.h>
 
 /*
  *导入第三方框架
  */
-#import <AFNetworking.h>
+#import <AFNetWorking.h>
 #import <Masonry.h>
-#import <YYKit.h>
+#import <YYModel.h>
 #import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
 #import <pop/POP.h>
 #import <JazzHands/IFTTTJazzHands.h>
+#import <SDImageCache.h>
+#import <UIImageView+WebCache.h>
+#import <SDCycleScrollView.h>
+
 
 //pod "AFNetworking"
 //pod "YYKit"
@@ -33,6 +38,8 @@
 //pod "pop"
 //pod "DZNEmptyDataSet"
 //pod "JazzHands"
+//pod "SDCycleScrollView"
+//pod "SDWebImage"
 
 /*
  *导入自定义类
@@ -40,12 +47,36 @@
 
 //主界面相关
 #import "EPMainController.h"
+#import "EPNavigationController.h"
+#import "EPOneShowController.h"
+#import "EPOneViewController.h"
+#import "EPOneDetailController.h"
+#import "OnePictuerCell.h"
+#import "OneTextCell.h"
+#import "OneSingCell.h"
 
 //欢迎界面相关
 #import "EPWelcomeController.h"
 #import "EPCircleVIew.h"
 
+//登录相关
+#import "EPLoginController.h"
+#import "EPLoginView.h"
+#import "EPLoginModel.h"
+#import "EPTextField.h"
+
+////musicplayer
+//#import "MusicControlView.h"
+//#import "EPMusicViewController.h"
+//#import "MusicInfoModel.h"
+//#import "MusicPlayTools.h"
+//#import "GetDataTools.h"
+//#import "MusicLyricModel.h"
+//#import "MusicViewController.h"
+//#import "MusicSlider.h"
+
 //Extensize
+#import "NSString+Additions.h"
 #import "UILabel+EPUILabel.h"
 
 /*

@@ -11,6 +11,7 @@
 @implementation UILabel (EPUILabel)
 
 + (UILabel *)ep_labelwithKindFontSize:(UIFont *)font Color:(UIColor *)color textAlignment:(NSTextAlignment)textAlignment {
+    
     UILabel *label = [[UILabel alloc] init];
     label.font = font;
     label.textColor = color;
